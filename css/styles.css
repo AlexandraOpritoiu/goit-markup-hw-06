@@ -745,18 +745,19 @@ ul {
 }
 
 .modal-btn {
+    box-sizing: content-box;
     width: 18px;
     height: 18px;
     display: flex;
     align-items: center;
     position: absolute;
-    width: 30px;
-    height: 30px;
+    cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50px;
     background-color: white;
-    top: 0;
-    right: 0;
+    top: 8px;
+    right: 8px;
+    padding: 6px;
 }
 
 /*Add animation*/
@@ -804,7 +805,7 @@ ul {
 .input-container{
     display: flex;
     flex-direction: column;
-    gap:4px;
+    padding-top:4px;
     position: relative;
 }
 
@@ -812,23 +813,71 @@ ul {
     height: 18px;
     width: 18px;
     position:absolute;
-    top: 11px;
+    top: 15px;
     left: 12px;
 }
 
-input, textarea{
-    height: 40px;
+.textfield{
+height: 40px;
+padding: 11px 12px 11px 42px;
+}
+
+textarea{
+height:120px;
+padding: 12px 16px;
+}
+
+textarea::placeholder{
+    font-family: var(--heading-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+        
+}
+
+.textfield, textarea{
     border-radius:4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    padding: 11px 12px 11px 42px;
     transition: var(--transition);
 }
 
-input:focus,
+.textfield:focus,
 textarea:focus{
     border: 1px solid rgba(33, 150, 243, 1)
 }
 
-input:focus + svg{
+.textfield:focus + svg{
     fill:rgba(33, 150, 243, 1);
+}
+
+.form-section .form-label{
+    font-family: var(--heading-font-family)
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 1); 
+}
+
+.form-section{
+    padding-bottom: 10px;
+}
+.terms-and-conditions {
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    cursor: pointer;
+}
+
+.terms-and-conditions span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color:#757575;
+}
+.terms-and-conditions span a {
+    color:var(--hover-color);
 }
