@@ -21,7 +21,7 @@
         <use href="./symbol-defs.svg#icon-close-black-18dp-2-11" />
       </svg>
       <form action="" method="get" class="contact-form">
-
+        <legend class="title-form">Leave your information and we'll call you back</legend>
         <div class="form-section">
           <label class="form-label" for="name">Name</label>
           <div class="input-container">
@@ -55,15 +55,26 @@
           <textarea name="Comments" placeholder="Enter the text"></textarea>
         </div>
 
-        <div class="input-container X">
-          <label class="terms-and-conditions">
-            <input type="checkbox" name="terms-and-conditions" value="checked" />
-            <span>I agree with the letter and accept the <a href="#">Terms and Conditions</a>
+        <div class="input-container terms-and-conditions-container">
+          <input class="terms-and-conditions-check" type="checkbox" name="terms-and-conditions-check"
+            id="terms-and-conditions-check" value="checked" />
+
+          <label class="terms-and-conditions-label" for="terms-and-conditions-check">
+            <svg class="icon-checkbox">
+              <use href="./symbol-defs.svg#icon-Vector"></use>
+            </svg>
+            <span>I agree with the
+              letter and accept the <a href="#">Terms and
+                Conditions</a>
             </span>
           </label>
         </div>
 
-        <input type=" submit" value="Send" />
+
+        <input class="btn-submit" type="submit" value="Send" />
+
+
+
 
       </form>
     </div>

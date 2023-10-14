@@ -183,7 +183,6 @@ ul {
     width: 200px;
     border-radius: 4px;
     cursor: pointer;
-    font-family: inherit;
     border: none;
     transition: var(--transition);
 }
@@ -699,7 +698,6 @@ ul {
     width: 100%;
     height: 100%;
     background-color: var(--hover-color);
-
     transform: translatey(100%);
     transition: var(--transition);
 }
@@ -708,9 +706,6 @@ ul {
     transform: translatey(0);
 }
 
-.is-hidden {
-    visibility: hidden;
-}
 
 .modal {
     position: fixed;
@@ -727,21 +722,24 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-    opacity: 1;
-}
+    z-index: 1; 
+   /* opacity: 1;*/    
+    }      
+       
+
 
 .modal-content {
     Width: 528px;
-    Height: 581px;
     background-color: #fff;
     position: fixed;
-    padding: 40px;
+    padding: 40px; 
+   
 }
 
 .is-hidden {
     visibility: hidden;
     cursor: pointer;
+  
 }
 
 .modal-btn {
@@ -759,8 +757,8 @@ ul {
     right: 8px;
     padding: 6px;
 }
-
-/*Add animation*/
+/*
+Add animation
 
 @keyframes OpenModal {
     from {
@@ -782,7 +780,6 @@ ul {
         }
     }
 
-
 .modal-content {
     animation-name: OpenModal;
     animation-duration: 2s;
@@ -794,6 +791,7 @@ ul {
     animation-duration: 2s;
     animation-delay: 0.5s;
 }
+*/
 
 .contact-form{
     display: flex;
@@ -868,16 +866,75 @@ textarea:focus{
     display: flex;
     flex-direction: row;
     gap:8px;
-    cursor: pointer;
+    
 }
-
-.terms-and-conditions span{
+.terms-and-conditions-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:8px;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    
+}
+.terms-and-conditions-label span{
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.03em;
     color:#757575;
 }
-.terms-and-conditions span a {
+.terms-and-conditions-label span a {
     color:var(--hover-color);
+}
+
+.terms-and-conditions-label svg{
+    width:13px;
+    height:13px;
+    position:absolute;
+    left:18px;
+    top:25.5px;
+}
+
+.terms-and-conditions-check:not(:checked){
+    visibility:hidden;
+}
+
+.terms-and-conditions-check:checked + label > svg{
+    display: none;
+}
+
+.btn-submit{
+width: 200px;
+height: 50px;
+cursor:pointer;
+border-radius: 4px;
+background-color: var(--hover-color);
+color:#fff;
+padding: 10px 80px;
+margin-left:125px;
+margin-right: 125px;
+margin-bottom: 15px;
+transition: var(--transition);
+}
+
+.btn-submit:hover{
+    background-color: #188CE8;
+    color: #fff;
+    box-shadow: 0px 4px 4px 0px #00000026;
+        }
+
+.title-form{
+    width:448px;
+    height:23px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0.03em;
+        text-align: center;
+        margin-bottom: 10px;
+      
+       
 }
