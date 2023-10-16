@@ -909,6 +909,10 @@ textarea:focus{
     visibility: visible;
 }
 
+.terms-and-conditions-check{
+    accent-color: #188ce8;
+}
+
 .btn-submit{
 width: 200px;
 height: 50px;
