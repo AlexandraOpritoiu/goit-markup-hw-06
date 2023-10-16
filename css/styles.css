@@ -902,12 +902,11 @@ textarea:focus{
     top:25.5px;
 }
 
-.terms-and-conditions-check:not(:checked){
-    visibility:hidden;
-}
-
-.terms-and-conditions-check:checked + label > svg{
+.terms-and-conditions-container:not(:checked) + input > svg{
     display: none;
+}
+.terms-and-conditions-container:checked + input> svg{
+    visibility: visible;
 }
 
 .btn-submit{
