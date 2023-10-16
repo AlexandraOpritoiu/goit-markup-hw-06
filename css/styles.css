@@ -901,13 +901,13 @@ textarea:focus{
     left:18px;
     top:25.5px;
 }
-
+/*
 .terms-and-conditions-container:not(:checked) + input > svg{
     display: none;
 }
 .terms-and-conditions-container:checked + input> svg{
     visibility: visible;
-}
+}*/
 
 .terms-and-conditions-check{
     accent-color: #188ce8;
